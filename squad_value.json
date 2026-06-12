@@ -1,0 +1,17 @@
+{
+  "_note": "Approximate total squad market value in EUR millions, early 2026. Editable; refresh from Transfermarkt's tournament squad-value page. Relative order matters more than exact figures. Used to (1) blend with Elo to correct over/under-rated teams, (2) anchor player-importance weighting.",
+  "values": {
+    "England": 1500, "France": 1400, "Spain": 1400, "Portugal": 1000,
+    "Germany": 1000, "Brazil": 1000, "Netherlands": 900, "Argentina": 700,
+    "Belgium": 550, "Norway": 480, "Colombia": 450, "Uruguay": 450,
+    "Croatia": 420, "Morocco": 400, "Senegal": 400, "United States": 360,
+    "Japan": 350, "Switzerland": 350, "Turkey": 350, "Austria": 350,
+    "Sweden": 320, "Ecuador": 300, "Ivory Coast": 300, "Mexico": 260,
+    "Czech Republic": 250, "South Korea": 250, "Canada": 240, "Algeria": 240,
+    "Ghana": 240, "Scotland": 240, "DR Congo": 200, "Egypt": 190,
+    "Paraguay": 150, "Tunisia": 130, "Australia": 120, "Iran": 95,
+    "South Africa": 85, "Cape Verde": 60, "Saudi Arabia": 60, "Uzbekistan": 55,
+    "Curaçao": 45, "New Zealand": 42, "Panama": 42, "Bosnia and Herzegovina": 250,
+    "Haiti": 32, "Qatar": 32, "Iraq": 30, "Jordan": 26
+  }
+}

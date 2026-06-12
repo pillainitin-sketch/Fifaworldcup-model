@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "description": "Foundational venue reference for the 2026 FIFA World Cup prediction tool. Static priors only. Match-day actual weather (temperature, humidity, UV, WBGT) should be pulled at runtime from the Open-Meteo Forecast API using each venue's lat/lng and kickoff time; elevation can be verified via the Open-Meteo Elevation API.",
+    "tournament": "2026 FIFA World Cup",
+    "venue_count": 16,
+    "field_notes": {
+      "roof_type": "open = no roof; retractable = retractable roof, climate-controlled; retractable_closed = retractable roof kept closed for matches but NOT air-conditioned; fixed_canopy_open_sides = roof overhead, sides open to air",
+      "climate_controlled": "true only where the closed roof is paired with air conditioning, which effectively neutralizes outdoor heat",
+      "pitch": "grass_over_turf venues laid temporary natural grass over their normal artificial turf for the tournament",
+      "typical_jun_jul_high_c": "approximate climatological daytime high in deg C; NOT a forecast",
+      "elevation_m": "approximate stadium elevation in metres; verify per-venue via Open-Meteo Elevation API",
+      "heat_exposure": "derived: combines climate with roof/AC. controlled = heat removed by AC; low/moderate/high = effective outdoor heat load on players",
+      "altitude_flag": "derived: high (>1800m, major effect), moderate (~1400-1700m, meaningful), low (<1000m, negligible)"
+    }
+  },
+  "venues": [
+    {
+      "city": "Mexico City", "country": "Mexico",
+      "stadium_fifa_name": "Estadio Ciudad de Mexico", "stadium_real_name": "Estadio Azteca",
+      "lat": 19.3029, "lng": -99.1505, "elevation_m": 2240,
+      "roof_type": "open", "climate_controlled": false, "pitch": "natural_grass",
+      "typical_jun_jul_high_c": 24, "humidity_level": "moderate", "rainy_season": true,
+      "heat_exposure": "low", "altitude_flag": "high",
+      "notes": "Tournament opener. ~2,240m altitude is the single biggest environmental factor of the World Cup; sea-level teams fatigue noticeably. July is rainy season."
+    },
+    {
+      "city": "Guadalajara", "country": "Mexico",
+      "stadium_fifa_name": "Estadio Guadalajara", "stadium_real_name": "Estadio Akron",
+      "lat": 20.6819, "lng": -103.4625, "elevation_m": 1566,
+      "roof_type": "open", "climate_controlled": false, "pitch": "natural_grass",
+      "typical_jun_jul_high_c": 28, "humidity_level": "moderate", "rainy_season": true,
+      "heat_exposure": "moderate", "altitude_flag": "moderate",
+      "notes": "Meaningful altitude (~1,566m). Rainy season brings short intense afternoon showers."
+    },
+    {
+      "city": "Monterrey", "country": "Mexico",
+      "stadium_fifa_name": "Estadio Monterrey", "stadium_real_name": "Estadio BBVA",
+      "lat": 25.6692, "lng": -100.2444, "elevation_m": 540,
+      "roof_type": "open", "climate_controlled": false, "pitch": "natural_grass",
+      "typical_jun_jul_high_c": 35, "humidity_level": "moderate", "rainy_season": false,
+      "heat_exposure": "high", "altitude_flag": "low",
+      "notes": "One of the hottest venues, regularly above 32C. Open roof, no relief."
+    },
+    {
+      "city": "Houston", "country": "USA",
+      "stadium_fifa_name": "Houston Stadium", "stadium_real_name": "NRG Stadium",
+      "lat": 29.6847, "lng": -95.4107, "elevation_m": 15,
+      "roof_type": "retractable", "climate_controlled": true, "pitch": "grass_over_turf",
+      "typical_jun_jul_high_c": 34, "humidity_level": "very_high", "rainy_season": false,
+      "heat_exposure": "controlled", "altitude_flag": "low",
+      "notes": "Brutally hot and humid outdoors, but retractable roof + AC neutralizes it. A heat-adapted team gets NO edge here."
+    },
+    {
+      "city": "Dallas", "country": "USA",
+      "stadium_fifa_name": "Dallas Stadium", "stadium_real_name": "AT&T Stadium",
+      "lat": 32.7473, "lng": -97.0945, "elevation_m": 180,
+      "roof_type": "retractable", "climate_controlled": true, "pitch": "grass_over_turf",
+      "typical_jun_jul_high_c": 35, "humidity_level": "moderate", "rainy_season": false,
+      "heat_exposure": "controlled", "altitude_flag": "low",
+      "notes": "Very hot city, but climate-controlled dome. Hosts a semifinal. Heat is removed indoors."
+    },
+    {
+      "city": "Atlanta", "country": "USA",
+      "stadium_fifa_name": "Atlanta Stadium", "stadium_real_name": "Mercedes-Benz Stadium",
+      "lat": 33.7553, "lng": -84.4006, "elevation_m": 320,
+      "roof_type": "retractable", "climate_controlled": true, "pitch": "grass_over_turf",
+      "typical_jun_jul_high_c": 31, "humidity_level": "high", "rainy_season": false,
+      "heat_exposure": "controlled", "altitude_flag": "low",
+      "notes": "Hot, humid city; retractable roof + AC. Hosts a semifinal."
+    },
+    {
+      "city": "Miami", "country": "USA",
+      "stadium_fifa_name": "Miami Stadium", "stadium_real_name": "Hard Rock Stadium",
+      "lat": 25.9580, "lng": -80.2389, "elevation_m": 3,
+      "roof_type": "fixed_canopy_open_sides", "climate_controlled": false, "pitch": "natural_grass",
+      "typical_jun_jul_high_c": 32, "humidity_level": "very_high", "rainy_season": true,
+      "heat_exposure": "high", "altitude_flag": "low",
+      "notes": "Canopy shades from sun/rain but sides open; extreme humidity remains. High effective heat load."
+    },
+    {
+      "city": "Kansas City", "country": "USA",
+      "stadium_fifa_name": "Kansas City Stadium", "stadium_real_name": "Arrowhead Stadium",
+      "lat": 39.0489, "lng": -94.4839, "elevation_m": 270,
+      "roof_type": "open", "climate_controlled": false, "pitch": "natural_grass",
+      "typical_jun_jul_high_c": 31, "humidity_level": "high", "rainy_season": false,
+      "heat_exposure": "high", "altitude_flag": "low",
+      "notes": "Open-air, hot and humid Midwestern summer. Hosts a quarterfinal."
+    },
+    {
+      "city": "Philadelphia", "country": "USA",
+      "stadium_fifa_name": "Philadelphia Stadium", "stadium_real_name": "Lincoln Financial Field",
+      "lat": 39.9008, "lng": -75.1675, "elevation_m": 12,
+      "roof_type": "open", "climate_controlled": false, "pitch": "natural_grass",
+      "typical_jun_jul_high_c": 30, "humidity_level": "high", "rainy_season": false,
+      "heat_exposure": "moderate", "altitude_flag": "low",
+      "notes": "Open-air, warm and humid; can spike on daytime kickoffs."
+    },
+    {
+      "city": "New York / New Jersey", "country": "USA",
+      "stadium_fifa_name": "New York New Jersey Stadium", "stadium_real_name": "MetLife Stadium",
+      "lat": 40.8135, "lng": -74.0745, "elevation_m": 3,
+      "roof_type": "open", "climate_controlled": false, "pitch": "grass_over_turf",
+      "typical_jun_jul_high_c": 29, "humidity_level": "high", "rainy_season": false,
+      "heat_exposure": "moderate", "altitude_flag": "low",
+      "notes": "FINAL venue (July 19). Open-air, no shade, humid New Jersey summer."
+    },
+    {
+      "city": "Boston", "country": "USA",
+      "stadium_fifa_name": "Boston Stadium", "stadium_real_name": "Gillette Stadium",
+      "lat": 42.0909, "lng": -71.2643, "elevation_m": 60,
+      "roof_type": "open", "climate_controlled": false, "pitch": "grass_over_turf",
+      "typical_jun_jul_high_c": 27, "humidity_level": "moderate", "rainy_season": false,
+      "heat_exposure": "moderate", "altitude_flag": "low",
+      "notes": "Open-air, generally milder New England summer. Hosts a quarterfinal."
+    },
+    {
+      "city": "San Francisco Bay Area", "country": "USA",
+      "stadium_fifa_name": "San Francisco Bay Area Stadium", "stadium_real_name": "Levi's Stadium",
+      "lat": 37.4030, "lng": -121.9700, "elevation_m": 9,
+      "roof_type": "open", "climate_controlled": false, "pitch": "natural_grass",
+      "typical_jun_jul_high_c": 27, "humidity_level": "low", "rainy_season": false,
+      "heat_exposure": "moderate", "altitude_flag": "low",
+      "notes": "Open-air; inland Santa Clara warmer and sunnier than coastal SF, but dry. No matches beyond round of 32."
+    },
+    {
+      "city": "Los Angeles", "country": "USA",
+      "stadium_fifa_name": "Los Angeles Stadium", "stadium_real_name": "SoFi Stadium",
+      "lat": 33.9535, "lng": -118.3392, "elevation_m": 40,
+      "roof_type": "fixed_canopy_open_sides", "climate_controlled": false, "pitch": "grass_over_turf",
+      "typical_jun_jul_high_c": 26, "humidity_level": "low", "rainy_season": false,
+      "heat_exposure": "low", "altitude_flag": "low",
+      "notes": "Canopy roof with open sides provides shade; mild, dry coastal LA climate. Hosts a quarterfinal."
+    },
+    {
+      "city": "Seattle", "country": "USA",
+      "stadium_fifa_name": "Seattle Stadium", "stadium_real_name": "Lumen Field",
+      "lat": 47.5952, "lng": -122.3316, "elevation_m": 20,
+      "roof_type": "open", "climate_controlled": false, "pitch": "grass_over_turf",
+      "typical_jun_jul_high_c": 24, "humidity_level": "low", "rainy_season": false,
+      "heat_exposure": "low", "altitude_flag": "low",
+      "notes": "Open-air but the coolest, driest US summer venue."
+    },
+    {
+      "city": "Toronto", "country": "Canada",
+      "stadium_fifa_name": "Toronto Stadium", "stadium_real_name": "BMO Field",
+      "lat": 43.6332, "lng": -79.4185, "elevation_m": 76,
+      "roof_type": "open", "climate_controlled": false, "pitch": "natural_grass",
+      "typical_jun_jul_high_c": 27, "humidity_level": "moderate", "rainy_season": false,
+      "heat_exposure": "moderate", "altitude_flag": "low",
+      "notes": "Open-air; temporary bleachers expanded capacity for the tournament."
+    },
+    {
+      "city": "Vancouver", "country": "Canada",
+      "stadium_fifa_name": "BC Place Vancouver", "stadium_real_name": "BC Place",
+      "lat": 49.2768, "lng": -123.1119, "elevation_m": 3,
+      "roof_type": "retractable_closed", "climate_controlled": false, "pitch": "grass_over_turf",
+      "typical_jun_jul_high_c": 22, "humidity_level": "moderate", "rainy_season": false,
+      "heat_exposure": "moderate", "altitude_flag": "low",
+      "notes": "Mild climate, but the retractable roof is kept CLOSED during matches (shadow on pitch) with no AC, so it can get warm and stuffy inside on hot days."
+    }
+  ]
+}

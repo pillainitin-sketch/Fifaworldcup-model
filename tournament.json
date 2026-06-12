@@ -1,0 +1,668 @@
+{
+ "n": 10000,
+ "conditioned": 0,
+ "probs": [
+  {
+   "team": "Spain",
+   "R32": 0.9863,
+   "R16": 0.5424,
+   "QF": 0.4146,
+   "SF": 0.2851,
+   "F": 0.1911,
+   "W": 0.1911
+  },
+  {
+   "team": "Argentina",
+   "R32": 0.9621,
+   "R16": 0.4962,
+   "QF": 0.3352,
+   "SF": 0.2141,
+   "F": 0.1275,
+   "W": 0.1275
+  },
+  {
+   "team": "France",
+   "R32": 0.9592,
+   "R16": 0.5053,
+   "QF": 0.3432,
+   "SF": 0.2071,
+   "F": 0.1228,
+   "W": 0.1228
+  },
+  {
+   "team": "Brazil",
+   "R32": 0.9663,
+   "R16": 0.4487,
+   "QF": 0.2857,
+   "SF": 0.1691,
+   "F": 0.0936,
+   "W": 0.0936
+  },
+  {
+   "team": "England",
+   "R32": 0.9664,
+   "R16": 0.4259,
+   "QF": 0.2588,
+   "SF": 0.1509,
+   "F": 0.0794,
+   "W": 0.0794
+  },
+  {
+   "team": "Portugal",
+   "R32": 0.9409,
+   "R16": 0.3907,
+   "QF": 0.2316,
+   "SF": 0.1244,
+   "F": 0.0651,
+   "W": 0.0651
+  },
+  {
+   "team": "Germany",
+   "R32": 0.9474,
+   "R16": 0.3345,
+   "QF": 0.1939,
+   "SF": 0.0968,
+   "F": 0.0436,
+   "W": 0.0436
+  },
+  {
+   "team": "Colombia",
+   "R32": 0.9154,
+   "R16": 0.2967,
+   "QF": 0.1577,
+   "SF": 0.0807,
+   "F": 0.0336,
+   "W": 0.0336
+  },
+  {
+   "team": "Netherlands",
+   "R32": 0.9159,
+   "R16": 0.3048,
+   "QF": 0.1565,
+   "SF": 0.0746,
+   "F": 0.0328,
+   "W": 0.0328
+  },
+  {
+   "team": "Belgium",
+   "R32": 0.9345,
+   "R16": 0.3234,
+   "QF": 0.1356,
+   "SF": 0.0659,
+   "F": 0.0272,
+   "W": 0.0272
+  },
+  {
+   "team": "Japan",
+   "R32": 0.8869,
+   "R16": 0.2618,
+   "QF": 0.1254,
+   "SF": 0.0551,
+   "F": 0.0248,
+   "W": 0.0248
+  },
+  {
+   "team": "Morocco",
+   "R32": 0.9149,
+   "R16": 0.2849,
+   "QF": 0.1311,
+   "SF": 0.0562,
+   "F": 0.0226,
+   "W": 0.0226
+  },
+  {
+   "team": "Mexico",
+   "R32": 0.9074,
+   "R16": 0.2987,
+   "QF": 0.115,
+   "SF": 0.0398,
+   "F": 0.0147,
+   "W": 0.0147
+  },
+  {
+   "team": "Ecuador",
+   "R32": 0.8957,
+   "R16": 0.2146,
+   "QF": 0.0976,
+   "SF": 0.0396,
+   "F": 0.0136,
+   "W": 0.0136
+  },
+  {
+   "team": "Turkey",
+   "R32": 0.8302,
+   "R16": 0.2169,
+   "QF": 0.082,
+   "SF": 0.0311,
+   "F": 0.0116,
+   "W": 0.0116
+  },
+  {
+   "team": "Croatia",
+   "R32": 0.8832,
+   "R16": 0.1801,
+   "QF": 0.0813,
+   "SF": 0.033,
+   "F": 0.0114,
+   "W": 0.0114
+  },
+  {
+   "team": "Norway",
+   "R32": 0.8152,
+   "R16": 0.1837,
+   "QF": 0.0772,
+   "SF": 0.03,
+   "F": 0.011,
+   "W": 0.011
+  },
+  {
+   "team": "Uruguay",
+   "R32": 0.9007,
+   "R16": 0.1886,
+   "QF": 0.0847,
+   "SF": 0.0312,
+   "F": 0.0106,
+   "W": 0.0106
+  },
+  {
+   "team": "Switzerland",
+   "R32": 0.9465,
+   "R16": 0.2216,
+   "QF": 0.0833,
+   "SF": 0.0297,
+   "F": 0.0094,
+   "W": 0.0094
+  },
+  {
+   "team": "Senegal",
+   "R32": 0.8045,
+   "R16": 0.1778,
+   "QF": 0.0772,
+   "SF": 0.0275,
+   "F": 0.009,
+   "W": 0.009
+  },
+  {
+   "team": "United States",
+   "R32": 0.7269,
+   "R16": 0.1841,
+   "QF": 0.0709,
+   "SF": 0.0275,
+   "F": 0.0083,
+   "W": 0.0083
+  },
+  {
+   "team": "Algeria",
+   "R32": 0.811,
+   "R16": 0.1444,
+   "QF": 0.0585,
+   "SF": 0.019,
+   "F": 0.0065,
+   "W": 0.0065
+  },
+  {
+   "team": "Austria",
+   "R32": 0.7662,
+   "R16": 0.1314,
+   "QF": 0.0515,
+   "SF": 0.0179,
+   "F": 0.0061,
+   "W": 0.0061
+  },
+  {
+   "team": "Canada",
+   "R32": 0.9102,
+   "R16": 0.2078,
+   "QF": 0.0698,
+   "SF": 0.0214,
+   "F": 0.0059,
+   "W": 0.0059
+  },
+  {
+   "team": "South Korea",
+   "R32": 0.8509,
+   "R16": 0.1614,
+   "QF": 0.0542,
+   "SF": 0.0175,
+   "F": 0.0053,
+   "W": 0.0053
+  },
+  {
+   "team": "Ivory Coast",
+   "R32": 0.7865,
+   "R16": 0.1219,
+   "QF": 0.0415,
+   "SF": 0.0113,
+   "F": 0.0038,
+   "W": 0.0038
+  },
+  {
+   "team": "Iran",
+   "R32": 0.8061,
+   "R16": 0.129,
+   "QF": 0.0421,
+   "SF": 0.0105,
+   "F": 0.0026,
+   "W": 0.0026
+  },
+  {
+   "team": "Paraguay",
+   "R32": 0.633,
+   "R16": 0.0876,
+   "QF": 0.0245,
+   "SF": 0.006,
+   "F": 0.0015,
+   "W": 0.0015
+  },
+  {
+   "team": "Australia",
+   "R32": 0.5791,
+   "R16": 0.0702,
+   "QF": 0.0185,
+   "SF": 0.0051,
+   "F": 0.0015,
+   "W": 0.0015
+  },
+  {
+   "team": "Czech Republic",
+   "R32": 0.6789,
+   "R16": 0.0903,
+   "QF": 0.0209,
+   "SF": 0.0056,
+   "F": 0.001,
+   "W": 0.001
+  },
+  {
+   "team": "Egypt",
+   "R32": 0.731,
+   "R16": 0.0853,
+   "QF": 0.0223,
+   "SF": 0.0048,
+   "F": 0.0006,
+   "W": 0.0006
+  },
+  {
+   "team": "DR Congo",
+   "R32": 0.45,
+   "R16": 0.0346,
+   "QF": 0.0093,
+   "SF": 0.0019,
+   "F": 0.0005,
+   "W": 0.0005
+  },
+  {
+   "team": "Scotland",
+   "R32": 0.5843,
+   "R16": 0.0521,
+   "QF": 0.0122,
+   "SF": 0.0027,
+   "F": 0.0004,
+   "W": 0.0004
+  },
+  {
+   "team": "Sweden",
+   "R32": 0.4942,
+   "R16": 0.0434,
+   "QF": 0.0098,
+   "SF": 0.003,
+   "F": 0.0002,
+   "W": 0.0002
+  },
+  {
+   "team": "Bosnia and Herzegovina",
+   "R32": 0.5038,
+   "R16": 0.0241,
+   "QF": 0.0023,
+   "SF": 0.0003,
+   "F": 0.0001,
+   "W": 0.0001
+  },
+  {
+   "team": "Tunisia",
+   "R32": 0.4012,
+   "R16": 0.0275,
+   "QF": 0.0061,
+   "SF": 0.0011,
+   "F": 0.0001,
+   "W": 0.0001
+  },
+  {
+   "team": "Uzbekistan",
+   "R32": 0.3434,
+   "R16": 0.022,
+   "QF": 0.0054,
+   "SF": 0.0009,
+   "F": 0.0001,
+   "W": 0.0001
+  },
+  {
+   "team": "Panama",
+   "R32": 0.4155,
+   "R16": 0.0185,
+   "QF": 0.0036,
+   "SF": 0.0007,
+   "F": 0.0001,
+   "W": 0.0001
+  },
+  {
+   "team": "South Africa",
+   "R32": 0.2778,
+   "R16": 0.0104,
+   "QF": 0.0014,
+   "SF": 0.0001,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "Qatar",
+   "R32": 0.1937,
+   "R16": 0.0023,
+   "QF": 0.0002,
+   "SF": 0.0,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "Haiti",
+   "R32": 0.1764,
+   "R16": 0.0049,
+   "QF": 0.0004,
+   "SF": 0.0,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "Cura\u00e7ao",
+   "R32": 0.1198,
+   "R16": 0.0015,
+   "QF": 0.0,
+   "SF": 0.0,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "New Zealand",
+   "R32": 0.2112,
+   "R16": 0.005,
+   "QF": 0.0006,
+   "SF": 0.0,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "Saudi Arabia",
+   "R32": 0.3274,
+   "R16": 0.0115,
+   "QF": 0.0016,
+   "SF": 0.0001,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "Cape Verde",
+   "R32": 0.2563,
+   "R16": 0.0066,
+   "QF": 0.0008,
+   "SF": 0.0,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "Iraq",
+   "R32": 0.1678,
+   "R16": 0.0065,
+   "QF": 0.0007,
+   "SF": 0.0,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "Jordan",
+   "R32": 0.1855,
+   "R16": 0.0054,
+   "QF": 0.0011,
+   "SF": 0.0003,
+   "F": 0.0,
+   "W": 0.0
+  },
+  {
+   "team": "Ghana",
+   "R32": 0.3323,
+   "R16": 0.013,
+   "QF": 0.0022,
+   "SF": 0.0004,
+   "F": 0.0,
+   "W": 0.0
+  }
+ ],
+ "bracket": {
+  "R32": [
+   {
+    "m": 73,
+    "home": "South Korea",
+    "away": "Canada",
+    "venue": "SoFi Stadium",
+    "fav": "Canada"
+   },
+   {
+    "m": 74,
+    "home": "Germany",
+    "away": "Paraguay",
+    "venue": "Gillette Stadium",
+    "fav": "Germany"
+   },
+   {
+    "m": 75,
+    "home": "Netherlands",
+    "away": "Morocco",
+    "venue": "Estadio BBVA",
+    "fav": "Netherlands"
+   },
+   {
+    "m": 76,
+    "home": "Brazil",
+    "away": "Japan",
+    "venue": "NRG Stadium",
+    "fav": "Brazil"
+   },
+   {
+    "m": 77,
+    "home": "France",
+    "away": "Egypt",
+    "venue": "MetLife Stadium",
+    "fav": "France"
+   },
+   {
+    "m": 78,
+    "home": "Ecuador",
+    "away": "Norway",
+    "venue": "AT&T Stadium",
+    "fav": "Ecuador"
+   },
+   {
+    "m": 79,
+    "home": "Mexico",
+    "away": "Scotland",
+    "venue": "Estadio Azteca",
+    "fav": "Mexico"
+   },
+   {
+    "m": 80,
+    "home": "England",
+    "away": "Ivory Coast",
+    "venue": "Mercedes-Benz Stadium",
+    "fav": "England"
+   },
+   {
+    "m": 81,
+    "home": "Turkey",
+    "away": "Sweden",
+    "venue": "Levi's Stadium",
+    "fav": "Turkey"
+   },
+   {
+    "m": 82,
+    "home": "Belgium",
+    "away": "Czech Republic",
+    "venue": "Lumen Field",
+    "fav": "Belgium"
+   },
+   {
+    "m": 83,
+    "home": "Colombia",
+    "away": "Croatia",
+    "venue": "BMO Field",
+    "fav": "Colombia"
+   },
+   {
+    "m": 84,
+    "home": "Spain",
+    "away": "Algeria",
+    "venue": "SoFi Stadium",
+    "fav": "Spain"
+   },
+   {
+    "m": 85,
+    "home": "Switzerland",
+    "away": "Austria",
+    "venue": "BC Place",
+    "fav": "Switzerland"
+   },
+   {
+    "m": 86,
+    "home": "Argentina",
+    "away": "Uruguay",
+    "venue": "Hard Rock Stadium",
+    "fav": "Argentina"
+   },
+   {
+    "m": 87,
+    "home": "Portugal",
+    "away": "Senegal",
+    "venue": "Arrowhead Stadium",
+    "fav": "Portugal"
+   },
+   {
+    "m": 88,
+    "home": "United States",
+    "away": "Iran",
+    "venue": "AT&T Stadium",
+    "fav": "United States"
+   }
+  ],
+  "R16": [
+   {
+    "m": 89,
+    "home": "Germany",
+    "away": "France",
+    "venue": "Lincoln Financial Field",
+    "fav": "France"
+   },
+   {
+    "m": 90,
+    "home": "Canada",
+    "away": "Netherlands",
+    "venue": "NRG Stadium",
+    "fav": "Netherlands"
+   },
+   {
+    "m": 91,
+    "home": "Brazil",
+    "away": "Ecuador",
+    "venue": "MetLife Stadium",
+    "fav": "Brazil"
+   },
+   {
+    "m": 92,
+    "home": "Mexico",
+    "away": "England",
+    "venue": "Estadio Azteca",
+    "fav": "England"
+   },
+   {
+    "m": 93,
+    "home": "Colombia",
+    "away": "Spain",
+    "venue": "AT&T Stadium",
+    "fav": "Spain"
+   },
+   {
+    "m": 94,
+    "home": "Turkey",
+    "away": "Belgium",
+    "venue": "Lumen Field",
+    "fav": "Belgium"
+   },
+   {
+    "m": 95,
+    "home": "Argentina",
+    "away": "United States",
+    "venue": "Mercedes-Benz Stadium",
+    "fav": "Argentina"
+   },
+   {
+    "m": 96,
+    "home": "Switzerland",
+    "away": "Portugal",
+    "venue": "BC Place",
+    "fav": "Portugal"
+   }
+  ],
+  "QF": [
+   {
+    "m": 97,
+    "home": "France",
+    "away": "Netherlands",
+    "venue": "Gillette Stadium",
+    "fav": "France"
+   },
+   {
+    "m": 98,
+    "home": "Spain",
+    "away": "Belgium",
+    "venue": "SoFi Stadium",
+    "fav": "Spain"
+   },
+   {
+    "m": 99,
+    "home": "Brazil",
+    "away": "England",
+    "venue": "Hard Rock Stadium",
+    "fav": "Brazil"
+   },
+   {
+    "m": 100,
+    "home": "Argentina",
+    "away": "Portugal",
+    "venue": "Arrowhead Stadium",
+    "fav": "Argentina"
+   }
+  ],
+  "SF": [
+   {
+    "m": 101,
+    "home": "France",
+    "away": "Spain",
+    "venue": "AT&T Stadium",
+    "fav": "Spain"
+   },
+   {
+    "m": 102,
+    "home": "Brazil",
+    "away": "Argentina",
+    "venue": "Mercedes-Benz Stadium",
+    "fav": "Argentina"
+   }
+  ],
+  "Final": [
+   {
+    "m": 104,
+    "home": "Spain",
+    "away": "Argentina",
+    "venue": "MetLife Stadium",
+    "fav": "Spain"
+   }
+  ],
+  "winner": "Spain"
+ }
+}
