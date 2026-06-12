@@ -449,5 +449,5 @@ renderDays(); renderFixtures(); renderTeams(); renderVenues(); renderTour();
 
 tour = json.load(open("tournament.json"))
 html = TEMPLATE.replace("__DATA__", json.dumps(data)).replace("__TOUR__", json.dumps(tour))
-open("/mnt/user-data/outputs/index.html", "w").write(html)
+open("index.html", "w").write(html)
 print("index.html written:", len(html), "bytes")
