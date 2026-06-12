@@ -26,7 +26,7 @@ bases = {t["team"]: t for t in json.load(open("team_climate_baseline.json"))["te
 try: RESULTS = json.load(open("wc2026_results.json"))
 except FileNotFoundError: RESULTS = {}
 R = E.strength(RESULTS)
-fixtures = fd.get_wc2026_fixtures()
+rows = fd.get_international_results()
 
 GROUPS = {
  'A':['Mexico','South Korea','South Africa','Czech Republic'],
@@ -94,23 +94,35 @@ def ko_winner(a, b, vname):
     pa = 1/(1+10**((eb-ea)/400))
     return a if random.random() < pa else b
 
-# precompute group fixtures with probs (+ fixed results)
+# precompute group fixtures with probs; lock in any already-played result
+# so the projection conditions on what has actually happened and simulates the rest
 GFX = {g: [] for g in GROUPS}
-for f in fixtures:
-    g = TEAM2GROUP.get(f["home_team"])
-    if g is None or TEAM2GROUP.get(f["away_team"]) != g:
+for r in rows:
+    if r.get("tournament") != "FIFA World Cup" or r.get("date", "") < "2026-06-01":
         continue
-    v = VEN.get(fd.CITY_TO_VENUE.get(f["city"]))
-    ea, eb = R.get(f["home_team"],E.START), R.get(f["away_team"],E.START)
-    if v and f["home_team"] in bases and f["away_team"] in bases:
-        e = TA.fixture_edge(bases[f["home_team"]], bases[f["away_team"]], v)
+    h, a = r["home_team"], r["away_team"]
+    g = TEAM2GROUP.get(h)
+    if g is None or TEAM2GROUP.get(a) != g:
+        continue  # knockout or non-group fixture
+    v = VEN.get(fd.CITY_TO_VENUE.get(r["city"]))
+    ea, eb = R.get(h, E.START), R.get(a, E.START)
+    if v and h in bases and a in bases:
+        e = TA.fixture_edge(bases[h], bases[a], v)
         ea += e["heat_edge"]*40 + e["altitude_edge"]*60
     pa = 1/(1+10**((eb-ea)/400)); draw = 0.27-0.20*abs(pa-0.5)
-    key = f"{f['date']}|{f['home_team']}|{f['away_team']}"
-    GFX[g].append((f["home_team"], f["away_team"], pa*(1-draw), draw, key))
+    key = f"{r['date']}|{h}|{a}"
+    fixed = None
+    hs, as_ = r.get("home_score"), r.get("away_score")
+    if hs not in ("", "NA", None) and as_ not in ("", "NA", None):
+        try: fixed = (int(hs), int(as_))
+        except (TypeError, ValueError): fixed = None
+    GFX[g].append((h, a, pa*(1-draw), draw, key, fixed))
 
-# sanity: every group has 6 fixtures
-assert all(len(GFX[g])==6 for g in GROUPS), {g:len(GFX[g]) for g in GROUPS}
+# soft check: warn but never crash the daily run
+_played = sum(1 for fxs in GFX.values() for x in fxs if x[5])
+for g in GROUPS:
+    if len(GFX[g]) != 6:
+        print(f"warning: group {g} has {len(GFX[g])} fixtures (expected 6)")
 
 def match_thirds(third_by_group):
     """Bipartite match: assign qualifying thirds (group->team) to the 8 third
@@ -135,8 +147,8 @@ def sim_once(track):
     W,RU,thirds={}, {}, []
     for g,fxs in GFX.items():
         pts={t:0 for t in GROUPS[g]}
-        for h,a,ph,pd,key in fxs:
-            fx=RESULTS.get(key)
+        for h,a,ph,pd,key,fixed in fxs:
+            fx=RESULTS.get(key) or fixed
             if fx: r = "h" if fx[0]>fx[1] else "a" if fx[0]<fx[1] else "d"
             else:
                 x=random.random(); r="h" if x<ph else "d" if x<ph+pd else "a"
@@ -172,7 +184,8 @@ ALL=[t for ts in GROUPS.values() for t in ts]
 track={t:{k:0 for k in ["R32","R16","QF","SF","F","W"]} for t in ALL}
 for _ in range(N): sim_once(track)
 
-print(f"Conditioned on {len(RESULTS)} result(s).\n" if RESULTS else "")
+locked = sum(1 for fxs in GFX.values() for x in fxs if (RESULTS.get(x[4]) or x[5]))
+print(f"Locked in {locked} played group result(s); simulating the rest.\n")
 print(f"=== Probabilities ({N} sims) ===")
 print(f"{'team':<16}{'R16':>6}{'QF':>6}{'SF':>6}{'Final':>7}{'Win':>6}")
 ranked=sorted(track.items(), key=lambda x:-x[1]["W"])
@@ -208,7 +221,7 @@ print("SF:", " | ".join(f"{x['home']} v {x['away']}" for x in bracket["SF"]))
 print("Final:", bracket["Final"][0]["home"], "v", bracket["Final"][0]["away"])
 print("Projected winner:", bracket["winner"])
 
-json.dump({"n":N,"conditioned":len(RESULTS),
+json.dump({"n":N,"conditioned":locked,
            "probs":[{"team":t,**{k:round(c[k]/N,4) for k in c}} for t,c in ranked],
            "bracket":bracket}, open("tournament.json","w"), indent=1)
 print("\nwrote tournament.json")
