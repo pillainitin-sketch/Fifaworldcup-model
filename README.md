@@ -5,8 +5,8 @@ FIFA World Cup, with a live dashboard. Built from open data, honest about its
 limits, and benchmarked against the betting market rather than claiming to beat
 it.
 
-**Live dashboard:** https://YOUR-USERNAME.github.io/REPO-NAME/
-*(replace with your GitHub Pages link once it is live)*
+**Live dashboard:** https://pillainitin-sketch.github.io/Fifaworldcup-model/
+
 
 ## What it does
 
