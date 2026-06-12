@@ -1,0 +1,41 @@
+name: Daily model update
+
+# Runs every morning, and can also be triggered by hand from the Actions tab.
+# Times are UTC. 06:00 UTC is about 11:30 in Mumbai; adjust the cron if you like.
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # lets the action commit the refreshed files back
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh the model and rebuild the dashboard
+        run: python refresh.py
+
+      - name: Commit the updated files
+        run: |
+          git config user.name "model-bot"
+          git config user.email "model-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Daily update $(date -u +%Y-%m-%d)" || echo "Nothing changed today"
+          git push
+
+# OPTIONAL, for live lineups / injuries via API-Football later:
+# 1) store your key as a repository Secret named API_FOOTBALL_KEY
+# 2) add this under the "Refresh" step's run, so the scripts can read it:
+#      env:
+#        API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+# The key never appears in the code or the logs, only in the protected Secret.
