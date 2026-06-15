@@ -12,7 +12,7 @@ index.html. Reload the dashboard to see the updated numbers for both teams.
 """
 import subprocess, sys, os
 
-steps = ["gen_predictions.py", "tournament.py", "build_dashboard.py"]
+steps = ["gen_predictions.py", "tournament.py", "grade.py", "build_dashboard.py"]
 
 if not os.path.exists("wc2026_results.json"):
     print("note: wc2026_results.json not found - running with no entered results yet.")
