@@ -43,9 +43,31 @@ def base_pretournament():
 
 def grade():
     rows = fd.get_international_results()
-    wc = sorted([r for r in rows if r.get("tournament") == "FIFA World Cup"
-                 and r["date"] >= "2026-06-01" and r["home_score"] not in ("", "NA", None)],
-                key=lambda r: r["date"])
+    wc = [r for r in rows if r.get("tournament") == "FIFA World Cup"
+          and r["date"] >= "2026-06-01" and r["home_score"] not in ("", "NA", None)]
+    have = {f"{r['date']}|{r['home_team']}|{r['away_team']}" for r in wc}
+
+    # fold in any manually added / backdated results not yet in the public data,
+    # so they grade immediately and are superseded cleanly once the data catches up
+    try:
+        manual = json.load(open("wc2026_results.json"))
+    except FileNotFoundError:
+        manual = {}
+    allfx = {f"{f['date']}|{f['home_team']}|{f['away_team']}": f for f in rows
+             if f.get("tournament") == "FIFA World Cup"}
+    for key, sc in manual.items():
+        if key in have:
+            continue
+        parts = key.split("|")
+        if len(parts) != 3:
+            continue
+        d, h, a = parts
+        base = allfx.get(key, {})
+        wc.append({"date": d, "home_team": h, "away_team": a,
+                   "home_score": sc[0], "away_score": sc[1],
+                   "city": base.get("city"), "neutral": base.get("neutral", "")})
+
+    wc.sort(key=lambda r: r["date"])
     R = base_pretournament()
     out = []
     for r in wc:
