@@ -168,6 +168,20 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
 .champ .cl{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
 .champ .cn{font-family:var(--disp);font-weight:700;font-size:20px;color:var(--gold);margin-top:3px}
 
+.res-list{display:flex;flex-direction:column;gap:8px}
+.res{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:11px 14px;
+  display:grid;grid-template-columns:1fr auto;gap:7px 12px;align-items:center}
+.res.miss{border-color:rgba(236,129,89,.28)}
+.res .rm{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;min-width:0}
+.res .rd{font-family:var(--mono);font-size:11px;color:var(--faint)}
+.res .rt{font-family:var(--disp);font-weight:600;font-size:15px}
+.res .rt .rs{font-family:var(--mono);font-weight:700;color:var(--text);margin:0 3px}
+.res .badge{font-family:var(--mono);font-size:11px;padding:3px 9px;border-radius:6px;justify-self:end;white-space:nowrap}
+.res .badge.ok{color:var(--good);background:rgba(70,207,156,.12)}
+.res .badge.no{color:var(--away);background:rgba(236,129,89,.13)}
+.res .rp{grid-column:1/-1;font-family:var(--mono);font-size:11.5px;color:var(--muted);
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.res .mini{display:inline-flex;height:6px;width:104px;border-radius:4px;overflow:hidden;background:var(--surface2)}
 .reveal{opacity:0;transform:translateY(10px);animation:rise .5s forwards}
 @keyframes rise{to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}
@@ -203,6 +217,12 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
     <button class="filt" id="exp">Export results</button>
     <label class="filt" style="cursor:pointer">Import results<input id="imp" type="file" accept="application/json" hidden></label>
   </div>
+</section>
+
+<section class="sec">
+  <div class="sec-h"><h2>Track record</h2><span class="meta" id="res-meta"></span></div>
+  <div class="res-list" id="results"></div>
+  <p class="sc-note" style="margin-top:12px">Every played match with the model's pre-match call and the actual result. A miss is when the model's most likely outcome did not happen. The percentage is what the model gave the outcome that actually occurred; the honest test is whether those stay sensible, not whether every favourite wins.</p>
 </section>
 
 <section class="sec">
@@ -360,6 +380,30 @@ function renderScorecard(){
   document.getElementById('m-ll').textContent=n?(ll/n).toFixed(3):'\u2013';
 }
 
+function renderResults(){
+  const g=[...(GRADED.graded||[])].sort((a,b)=> a.date<b.date?1:a.date>b.date?-1:0);
+  const meta=document.getElementById('res-meta');
+  if(!g.length){ meta.textContent='none yet';
+    document.getElementById('results').innerHTML='<p class="sc-note">No matches played yet. The track record fills in as games are played.</p>'; return; }
+  const hitN=g.filter(m=>{const b=[['home',m.p_home],['draw',m.p_draw],['away',m.p_away]].sort((x,y)=>y[1]-x[1])[0][0];return b===m.outcome;}).length;
+  meta.textContent=`${g.length} played \u00b7 ${hitN} called`;
+  document.getElementById('results').innerHTML=g.map(m=>{
+    const arr=[['home',m.p_home],['draw',m.p_draw],['away',m.p_away]].sort((x,y)=>y[1]-x[1]);
+    const best=arr[0][0]; const hit=best===m.outcome;
+    const pick=best==='home'?m.home:best==='away'?m.away:'a draw';
+    const oname=m.outcome==='home'?m.home:m.outcome==='away'?m.away:'the draw';
+    const ph=Math.round(m.p_home*100),pd=Math.round(m.p_draw*100),pa=Math.round(m.p_away*100);
+    return `<div class="res ${hit?'':'miss'}">
+      <div class="rm"><span class="rd">${fmtDate(m.date)}</span>
+        <span class="rt">${m.home}<span class="rs">${m.hs}\u2013${m.as}</span>${m.away}</span></div>
+      <span class="badge ${hit?'ok':'no'}">${hit?'\u2713 called':'\u2717 missed'}</span>
+      <div class="rp">said <b style="color:var(--text)">${pick} ${Math.round(arr[0][1]*100)}%</b>
+        <span class="mini"><span class="seg-h" style="width:${ph}%"></span><span class="seg-d" style="width:${pd}%"></span><span class="seg-a" style="width:${pa}%"></span></span>
+        gave ${oname} ${Math.round(m['p_'+m.outcome]*100)}%</div>
+    </div>`;
+  }).join('');
+}
+
 function renderFixtures(){
   const list = DATA.fixtures.filter(f=>activeDay==='all'||f.date===activeDay);
   document.getElementById('fixtures').innerHTML = list.map(card).join('');
@@ -442,7 +486,7 @@ document.getElementById('s-fix').textContent=DATA.n_fixtures;
 document.getElementById('s-ven').textContent=DATA.n_venues;
 document.getElementById('exp').onclick=exportResults;
 document.getElementById('imp').onchange=e=>{ if(e.target.files[0]) importResults(e.target.files[0]); };
-renderDays(); renderFixtures(); renderTeams(); renderVenues(); renderTour();
+renderDays(); renderFixtures(); renderResults(); renderTeams(); renderVenues(); renderTour();
 </script>
 </body>
 </html>"""
