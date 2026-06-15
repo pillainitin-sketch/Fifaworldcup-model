@@ -17,20 +17,20 @@
    "away": "Japan",
    "home_star": "Cody Gakpo",
    "away_star": "Takefusa Kubo",
-   "elo_home": 1885,
-   "elo_away": 1855,
-   "gap": 30,
-   "p_home": 0.401,
-   "p_draw": 0.261,
-   "p_away": 0.338,
-   "p_home_base": 0.401,
-   "p_away_base": 0.338,
+   "elo_home": 1883,
+   "elo_away": 1856,
+   "gap": 27,
+   "p_home": 0.398,
+   "p_draw": 0.262,
+   "p_away": 0.34,
+   "p_home_base": 0.398,
+   "p_away_base": 0.34,
    "heat_edge": 0.0,
    "alt_edge": 0.0,
    "climate_elo": 0.0,
    "favourite": "Netherlands",
    "neutral": true,
-   "read": "Netherlands favoured on a 30-point rating edge."
+   "read": "Netherlands favoured on a 27-point rating edge."
   },
   {
    "date": "2026-06-14",
@@ -45,20 +45,20 @@
    "away": "Tunisia",
    "home_star": "Alexander Isak",
    "away_star": "Hannibal Mejbri",
-   "elo_home": 1678,
-   "elo_away": 1633,
-   "gap": 45,
-   "p_home": 0.389,
-   "p_draw": 0.264,
-   "p_away": 0.346,
-   "p_home_base": 0.419,
-   "p_away_base": 0.324,
+   "elo_home": 1704,
+   "elo_away": 1607,
+   "gap": 97,
+   "p_home": 0.453,
+   "p_draw": 0.249,
+   "p_away": 0.298,
+   "p_home_base": 0.482,
+   "p_away_base": 0.276,
    "heat_edge": -0.611,
    "alt_edge": 0.0,
    "climate_elo": -24.4,
    "favourite": "Sweden",
    "neutral": true,
-   "read": "Sweden favoured on a 45-point rating edge. High heat leans to Tunisia."
+   "read": "Sweden favoured on a 97-point rating edge. High heat leans to Tunisia."
   },
   {
    "date": "2026-06-14",
@@ -689,20 +689,20 @@
    "away": "Japan",
    "home_star": "Hannibal Mejbri",
    "away_star": "Takefusa Kubo",
-   "elo_home": 1633,
-   "elo_away": 1855,
-   "gap": 222,
-   "p_home": 0.178,
-   "p_draw": 0.215,
-   "p_away": 0.606,
-   "p_home_base": 0.172,
-   "p_away_base": 0.615,
+   "elo_home": 1607,
+   "elo_away": 1856,
+   "gap": 249,
+   "p_home": 0.158,
+   "p_draw": 0.21,
+   "p_away": 0.631,
+   "p_home_base": 0.152,
+   "p_away_base": 0.639,
    "heat_edge": 0.222,
    "alt_edge": 0.0,
    "climate_elo": 8.9,
    "favourite": "Japan",
    "neutral": true,
-   "read": "Japan favoured on a 222-point rating edge."
+   "read": "Japan favoured on a 249-point rating edge."
   },
   {
    "date": "2026-06-20",
@@ -717,20 +717,20 @@
    "away": "Sweden",
    "home_star": "Cody Gakpo",
    "away_star": "Alexander Isak",
-   "elo_home": 1885,
-   "elo_away": 1678,
-   "gap": 207,
-   "p_home": 0.601,
-   "p_draw": 0.217,
-   "p_away": 0.183,
-   "p_home_base": 0.601,
-   "p_away_base": 0.183,
+   "elo_home": 1883,
+   "elo_away": 1704,
+   "gap": 179,
+   "p_home": 0.573,
+   "p_draw": 0.223,
+   "p_away": 0.204,
+   "p_home_base": 0.573,
+   "p_away_base": 0.204,
    "heat_edge": 0.0,
    "alt_edge": 0.0,
    "climate_elo": 0.0,
    "favourite": "Netherlands",
    "neutral": true,
-   "read": "Netherlands favoured on a 207-point rating edge."
+   "read": "Netherlands favoured on a 179-point rating edge."
   },
   {
    "date": "2026-06-20",
@@ -1305,20 +1305,20 @@
    "away": "Sweden",
    "home_star": "Takefusa Kubo",
    "away_star": "Alexander Isak",
-   "elo_home": 1855,
-   "elo_away": 1678,
-   "gap": 177,
-   "p_home": 0.571,
-   "p_draw": 0.223,
-   "p_away": 0.206,
-   "p_home_base": 0.571,
-   "p_away_base": 0.206,
+   "elo_home": 1856,
+   "elo_away": 1704,
+   "gap": 152,
+   "p_home": 0.544,
+   "p_draw": 0.229,
+   "p_away": 0.227,
+   "p_home_base": 0.544,
+   "p_away_base": 0.227,
    "heat_edge": 0.0,
    "alt_edge": 0.0,
    "climate_elo": 0.0,
    "favourite": "Japan",
    "neutral": true,
-   "read": "Japan favoured on a 177-point rating edge."
+   "read": "Japan favoured on a 152-point rating edge."
   },
   {
    "date": "2026-06-25",
@@ -1389,20 +1389,20 @@
    "away": "Netherlands",
    "home_star": "Hannibal Mejbri",
    "away_star": "Cody Gakpo",
-   "elo_home": 1633,
-   "elo_away": 1885,
-   "gap": 251,
-   "p_home": 0.165,
-   "p_draw": 0.212,
-   "p_away": 0.624,
-   "p_home_base": 0.151,
-   "p_away_base": 0.641,
+   "elo_home": 1607,
+   "elo_away": 1883,
+   "gap": 276,
+   "p_home": 0.148,
+   "p_draw": 0.207,
+   "p_away": 0.645,
+   "p_home_base": 0.135,
+   "p_away_base": 0.661,
    "heat_edge": 0.5,
    "alt_edge": 0.0,
    "climate_elo": 20.0,
    "favourite": "Netherlands",
    "neutral": true,
-   "read": "Netherlands favoured on a 251-point rating edge. High heat leans to Tunisia."
+   "read": "Netherlands favoured on a 276-point rating edge. High heat leans to Tunisia."
   },
   {
    "date": "2026-06-25",
@@ -1880,7 +1880,7 @@
   },
   {
    "team": "Netherlands",
-   "elo": 1885,
+   "elo": 1883,
    "star": "Cody Gakpo",
    "base_c": 22,
    "base_m": 2,
@@ -1900,7 +1900,7 @@
   },
   {
    "team": "Japan",
-   "elo": 1855,
+   "elo": 1856,
    "star": "Takefusa Kubo",
    "base_c": 29,
    "base_m": 40,
@@ -2079,6 +2079,16 @@
    "rank": 28
   },
   {
+   "team": "Sweden",
+   "elo": 1704,
+   "star": "Alexander Isak",
+   "base_c": 22,
+   "base_m": 20,
+   "hemisphere": "N",
+   "europe": "high",
+   "rank": 29
+  },
+  {
    "team": "Paraguay",
    "elo": 1697,
    "star": "Miguel Almiron",
@@ -2086,7 +2096,7 @@
    "base_m": 60,
    "hemisphere": "S",
    "europe": "med",
-   "rank": 29
+   "rank": 30
   },
   {
    "team": "Egypt",
@@ -2096,7 +2106,7 @@
    "base_m": 25,
    "hemisphere": "N",
    "europe": "med",
-   "rank": 30
+   "rank": 31
   },
   {
    "team": "Scotland",
@@ -2106,7 +2116,7 @@
    "base_m": 30,
    "hemisphere": "N",
    "europe": "high",
-   "rank": 31
+   "rank": 32
   },
   {
    "team": "Czech Republic",
@@ -2114,16 +2124,6 @@
    "star": "Patrik Schick",
    "base_c": 24,
    "base_m": 200,
-   "hemisphere": "N",
-   "europe": "high",
-   "rank": 32
-  },
-  {
-   "team": "Sweden",
-   "elo": 1678,
-   "star": "Alexander Isak",
-   "base_c": 22,
-   "base_m": 20,
    "hemisphere": "N",
    "europe": "high",
    "rank": 33
@@ -2139,16 +2139,6 @@
    "rank": 34
   },
   {
-   "team": "Tunisia",
-   "elo": 1633,
-   "star": "Hannibal Mejbri",
-   "base_c": 33,
-   "base_m": 10,
-   "hemisphere": "N",
-   "europe": "med",
-   "rank": 35
-  },
-  {
    "team": "Uzbekistan",
    "elo": 1628,
    "star": "Eldor Shomurodov",
@@ -2156,6 +2146,16 @@
    "base_m": 460,
    "hemisphere": "N",
    "europe": "low",
+   "rank": 35
+  },
+  {
+   "team": "Tunisia",
+   "elo": 1607,
+   "star": "Hannibal Mejbri",
+   "base_c": 33,
+   "base_m": 10,
+   "hemisphere": "N",
+   "europe": "med",
    "rank": 36
   },
   {
