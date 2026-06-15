@@ -191,14 +191,14 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
 </header>
 
 <section class="sec">
-  <div class="sec-h"><h2>Model scorecard</h2><span class="meta">updates as you enter results</span></div>
+  <div class="sec-h"><h2>Model scorecard</h2><span class="meta">graded automatically as matches are played</span></div>
   <div class="scorecard">
-    <div class="metric"><b class="num" id="m-n">0</b><span>results entered</span></div>
+    <div class="metric"><b class="num" id="m-n">0</b><span>matches graded</span></div>
     <div class="metric"><b class="num" id="m-hit">&ndash;</b><span>favourite correct</span><small>top pick lands</small></div>
     <div class="metric"><b class="num" id="m-brier">&ndash;</b><span>Brier score</span><small>lower is better</small></div>
     <div class="metric"><b class="num" id="m-ll">&ndash;</b><span>log loss</span><small>lower is better</small></div>
   </div>
-  <p class="sc-note">Enter a final score on any match card below; scores save in this browser. For reference, a coin-flip baseline scores about 0.67 Brier and 1.10 log loss, so anything well under that is real skill. The bookmaker line is the bar that matters.</p>
+  <p class="sc-note">Every played match is scored against the prediction the model would have made using only the data available beforehand, a true walk-forward record. A coin-flip baseline scores about 0.67 Brier and 1.10 log loss, so lower is genuine skill. Early on the sample is small and these swing game to game; they settle as more matches play. The bookmaker line is the bar that matters.</p>
   <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
     <button class="filt" id="exp">Export results</button>
     <label class="filt" style="cursor:pointer">Import results<input id="imp" type="file" accept="application/json" hidden></label>
@@ -249,6 +249,7 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
 <script>
 const DATA = __DATA__;
 const TOUR = __TOUR__;
+const GRADED = __GRADED__;
 
 let RESULTS = {};
 try { const s = localStorage.getItem('wc26_results'); if(s) RESULTS = JSON.parse(s); } catch(e) {}
@@ -345,14 +346,13 @@ function card(f,i){
 
 function renderScorecard(){
   let n=0,hits=0,brier=0,ll=0;
-  DATA.fixtures.forEach(f=>{
-    const r=getResult(f); if(!r)return;
-    n++; const o=outcome(r.hs,r.as);
-    if(bestOutcome(f)===o)hits++;
+  (GRADED.graded||[]).forEach(g=>{
+    n++; const o=g.outcome;
+    const best=[['home',g.p_home],['draw',g.p_draw],['away',g.p_away]].sort((x,y)=>y[1]-x[1])[0][0];
+    if(best===o)hits++;
     const yh=o==='home'?1:0,yd=o==='draw'?1:0,ya=o==='away'?1:0;
-    brier+=(f.p_home-yh)**2+(f.p_draw-yd)**2+(f.p_away-ya)**2;
-    const p=o==='home'?f.p_home:o==='away'?f.p_away:f.p_draw;
-    ll+=-Math.log(Math.max(p,1e-6));
+    brier+=(g.p_home-yh)**2+(g.p_draw-yd)**2+(g.p_away-ya)**2;
+    ll+=-Math.log(Math.max(g['p_'+o],1e-6));
   });
   document.getElementById('m-n').textContent=n;
   document.getElementById('m-hit').textContent=n?Math.round(hits/n*100)+'%':'\u2013';
@@ -448,6 +448,10 @@ renderDays(); renderFixtures(); renderTeams(); renderVenues(); renderTour();
 </html>"""
 
 tour = json.load(open("tournament.json"))
-html = TEMPLATE.replace("__DATA__", json.dumps(data)).replace("__TOUR__", json.dumps(tour))
+try: graded = json.load(open("graded.json"))
+except FileNotFoundError: graded = {"n": 0, "graded": []}
+html = (TEMPLATE.replace("__DATA__", json.dumps(data))
+                .replace("__TOUR__", json.dumps(tour))
+                .replace("__GRADED__", json.dumps(graded)))
 open("index.html", "w").write(html)
 print("index.html written:", len(html), "bytes")
