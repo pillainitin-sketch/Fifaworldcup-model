@@ -159,6 +159,9 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
 .proj-tbl .winbar{display:inline-block;height:6px;background:var(--gold);border-radius:3px;vertical-align:middle;margin-left:6px;opacity:.5}
 .bracket{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
 @media(max-width:720px){.bracket{grid-template-columns:1fr}}
+.r32-h{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin:2px 0 12px}
+.r32grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:28px}
+@media(max-width:720px){.r32grid{grid-template-columns:repeat(2,1fr)}}
 .bcol h4{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
 .bmatch{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-bottom:8px}
 .bmatch .bt{font-family:var(--disp);font-size:13.5px;display:flex;justify-content:space-between;align-items:center;padding:2px 0;color:var(--muted)}
@@ -236,6 +239,8 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
   <table class="proj-tbl"><thead><tr>
     <th></th><th>Team</th><th>R16</th><th>QF</th><th>SF</th><th>Final</th><th>Win</th>
   </tr></thead><tbody id="tour-body"></tbody></table>
+  <h4 class="r32-h">Round of 32 &middot; locks to the table as groups finish</h4>
+  <div class="r32grid" id="r32"></div>
   <div class="bracket" id="bracket"></div>
   <p class="sc-note" style="margin-top:14px">Ten thousand simulations on FIFA's official bracket: real groups, the round-of-32 slot map, venue heat and altitude in the knockouts, and host advantage. The projected bracket shows the favourite path; trust the distribution above it, not the single line. As you enter group results, re-run the simulation and these sharpen.</p>
 </section>
@@ -475,6 +480,7 @@ function renderTour(){
     <div class="bt ${m.fav===m.home?'win':''}">${m.home}</div>
     <div class="bt ${m.fav===m.away?'win':''}">${m.away}<span class="bv">${short(m.venue)}</span></div></div>`;
   const col=(t,a)=>`<div class="bcol"><h4>${t}</h4>${a.map(mtch).join('')}</div>`;
+  document.getElementById('r32').innerHTML = (b.R32||[]).map(mtch).join('');
   document.getElementById('bracket').innerHTML =
     col('Quarterfinals',b.QF)+col('Semifinals',b.SF)+
     `<div class="bcol"><h4>Final</h4>${mtch(b.Final[0])}

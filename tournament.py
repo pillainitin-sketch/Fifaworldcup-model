@@ -143,23 +143,46 @@ def match_thirds(third_by_group):
         try_assign(m, set())
     return {m: third_by_group[g] for m,g in matchM.items()}
 
+def standings(g):
+    """Live or final group table from played scores: points, then goal difference,
+    then goals scored, with Elo only as a last-resort tiebreak. Before any game is
+    played a group ranks on Elo, so the bracket starts strength-seeded and converges
+    to the true table as results land."""
+    tab = {t: {"pts": 0, "gf": 0, "ga": 0, "pl": 0} for t in GROUPS[g]}
+    for h, a, ph, pd, key, fixed in GFX[g]:
+        fx = RESULTS.get(key) or fixed
+        if not fx:
+            continue
+        hs, as_ = fx
+        tab[h]["gf"] += hs; tab[h]["ga"] += as_; tab[h]["pl"] += 1
+        tab[a]["gf"] += as_; tab[a]["ga"] += hs; tab[a]["pl"] += 1
+        if hs > as_: tab[h]["pts"] += 3
+        elif hs < as_: tab[a]["pts"] += 3
+        else: tab[h]["pts"] += 1; tab[a]["pts"] += 1
+    ranked = sorted(GROUPS[g], key=lambda t: (
+        tab[t]["pts"], tab[t]["gf"] - tab[t]["ga"], tab[t]["gf"], R.get(t, E.START)), reverse=True)
+    return ranked, tab
+
+
 def sim_once(track):
     W,RU,thirds={}, {}, []
     for g,fxs in GFX.items():
-        pts={t:0 for t in GROUPS[g]}
+        pts={t:0 for t in GROUPS[g]}; gf={t:0 for t in GROUPS[g]}; ga={t:0 for t in GROUPS[g]}
         for h,a,ph,pd,key,fixed in fxs:
             fx=RESULTS.get(key) or fixed
-            if fx: r = "h" if fx[0]>fx[1] else "a" if fx[0]<fx[1] else "d"
+            if fx:
+                hs,as_=fx; gf[h]+=hs; ga[h]+=as_; gf[a]+=as_; ga[a]+=hs
+                r = "h" if hs>as_ else "a" if hs<as_ else "d"
             else:
                 x=random.random(); r="h" if x<ph else "d" if x<ph+pd else "a"
             if r=="h": pts[h]+=3
             elif r=="a": pts[a]+=3
             else: pts[h]+=1; pts[a]+=1
-        rank=sorted(GROUPS[g], key=lambda t:(pts[t], R.get(t,E.START)), reverse=True)
+        rank=sorted(GROUPS[g], key=lambda t:(pts[t], gf[t]-ga[t], gf[t], R.get(t,E.START)), reverse=True)
         W[g],RU[g]=rank[0],rank[1]
-        thirds.append((pts[rank[2]], R.get(rank[2],E.START), g, rank[2]))
+        thirds.append((pts[rank[2]], gf[rank[2]]-ga[rank[2]], gf[rank[2]], R.get(rank[2],E.START), g, rank[2]))
     thirds.sort(reverse=True)
-    qual_thirds = {g:t for _,_,g,t in thirds[:8]}
+    qual_thirds = {g:t for *_,g,t in thirds[:8]}
     slot3 = match_thirds(qual_thirds)
     for t in list(W.values())+list(RU.values())+list(qual_thirds.values()):
         track[t]["R32"]+=1
@@ -193,14 +216,18 @@ for t,c in ranked[:16]:
     print(f"{t:<16}{c['R16']/N*100:>5.0f}{c['QF']/N*100:>6.0f}{c['SF']/N*100:>6.0f}"
           f"{c['F']/N*100:>7.0f}{c['W']/N*100:>6.1f}")
 
-# deterministic projected bracket: top-2 by Elo per group, best thirds by Elo, favourite advances
+# projected bracket: real group table where games are played (points, GD, GF, Elo
+# only as last resort), best 8 thirds by the same order, favourite advances in knockouts
 def proj():
-    W={g:max(ts,key=lambda t:R.get(t,E.START)) for g,ts in GROUPS.items()}
-    RU={g:sorted(ts,key=lambda t:R.get(t,E.START),reverse=True)[1] for g,ts in GROUPS.items()}
-    thirds=sorted(((R.get(sorted(ts,key=lambda t:R.get(t,E.START),reverse=True)[2],E.START),g,
-                    sorted(ts,key=lambda t:R.get(t,E.START),reverse=True)[2]) for g,ts in GROUPS.items()),
-                  reverse=True)[:8]
-    slot3=match_thirds({g:t for _,g,t in thirds})
+    rk={g:standings(g) for g in GROUPS}
+    W={g:rk[g][0][0] for g in GROUPS}
+    RU={g:rk[g][0][1] for g in GROUPS}
+    thirds=[]
+    for g in GROUPS:
+        t3=rk[g][0][2]; tb=rk[g][1][t3]
+        thirds.append((tb["pts"], tb["gf"]-tb["ga"], tb["gf"], R.get(t3,E.START), g, t3))
+    thirds.sort(reverse=True)
+    slot3=match_thirds({g:t for *_,g,t in thirds[:8]})
     def res(slot,m=None): return W[slot[1]] if slot[0]=='W' else RU[slot[1]] if slot[0]=='RU' else slot3[m]
     out={}; r={}
     for m,(sa,sb,v) in R32.items():
