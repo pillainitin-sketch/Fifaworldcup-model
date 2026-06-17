@@ -1,5 +1,5 @@
 {
- "n": 16,
+ "n": 19,
  "graded": [
   {
    "date": "2026-06-11",
@@ -135,13 +135,13 @@
   },
   {
    "date": "2026-06-15",
-   "home": "Spain",
-   "away": "Cape Verde",
-   "p_home": 0.766,
-   "p_draw": 0.183,
-   "p_away": 0.052,
-   "hs": 0,
-   "as": 0,
+   "home": "Belgium",
+   "away": "Egypt",
+   "p_home": 0.503,
+   "p_draw": 0.238,
+   "p_away": 0.259,
+   "hs": 1,
+   "as": 1,
    "outcome": "draw"
   },
   {
@@ -157,6 +157,17 @@
   },
   {
    "date": "2026-06-15",
+   "home": "Spain",
+   "away": "Cape Verde",
+   "p_home": 0.766,
+   "p_draw": 0.183,
+   "p_away": 0.052,
+   "hs": 0,
+   "as": 0,
+   "outcome": "draw"
+  },
+  {
+   "date": "2026-06-15",
    "home": "Saudi Arabia",
    "away": "Uruguay",
    "p_home": 0.15,
@@ -167,15 +178,37 @@
    "outcome": "draw"
   },
   {
-   "date": "2026-06-15",
-   "home": "Belgium",
-   "away": "Egypt",
-   "p_home": 0.503,
-   "p_draw": 0.238,
-   "p_away": 0.259,
-   "hs": 1,
+   "date": "2026-06-16",
+   "home": "France",
+   "away": "Senegal",
+   "p_home": 0.571,
+   "p_draw": 0.223,
+   "p_away": 0.206,
+   "hs": 3,
    "as": 1,
-   "outcome": "draw"
+   "outcome": "home"
+  },
+  {
+   "date": "2026-06-16",
+   "home": "Iraq",
+   "away": "Norway",
+   "p_home": 0.156,
+   "p_draw": 0.209,
+   "p_away": 0.635,
+   "hs": 1,
+   "as": 4,
+   "outcome": "away"
+  },
+  {
+   "date": "2026-06-16",
+   "home": "Argentina",
+   "away": "Algeria",
+   "p_home": 0.598,
+   "p_draw": 0.217,
+   "p_away": 0.185,
+   "hs": 3,
+   "as": 0,
+   "outcome": "home"
   }
  ]
 }
