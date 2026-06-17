@@ -1,5 +1,5 @@
 {
- "n": 19,
+ "n": 20,
  "graded": [
   {
    "date": "2026-06-11",
@@ -208,6 +208,17 @@
    "p_away": 0.185,
    "hs": 3,
    "as": 0,
+   "outcome": "home"
+  },
+  {
+   "date": "2026-06-16",
+   "home": "Austria",
+   "away": "Jordan",
+   "p_home": 0.61,
+   "p_draw": 0.215,
+   "p_away": 0.175,
+   "hs": 3,
+   "as": 1,
    "outcome": "home"
   }
  ]
