@@ -223,17 +223,6 @@
   },
   {
    "date": "2026-06-17",
-   "home": "England",
-   "away": "Croatia",
-   "p_home": 0.491,
-   "p_draw": 0.241,
-   "p_away": 0.268,
-   "hs": 4,
-   "as": 2,
-   "outcome": "home"
-  },
-  {
-   "date": "2026-06-17",
    "home": "Portugal",
    "away": "DR Congo",
    "p_home": 0.641,
@@ -253,6 +242,17 @@
    "hs": 1,
    "as": 3,
    "outcome": "away"
+  },
+  {
+   "date": "2026-06-17",
+   "home": "England",
+   "away": "Croatia",
+   "p_home": 0.491,
+   "p_draw": 0.241,
+   "p_away": 0.268,
+   "hs": 4,
+   "as": 2,
+   "outcome": "home"
   },
   {
    "date": "2026-06-17",
