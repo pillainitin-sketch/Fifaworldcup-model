@@ -278,6 +278,17 @@
   },
   {
    "date": "2026-06-18",
+   "home": "Mexico",
+   "away": "South Korea",
+   "p_home": 0.482,
+   "p_draw": 0.243,
+   "p_away": 0.276,
+   "hs": 1,
+   "as": 0,
+   "outcome": "home"
+  },
+  {
+   "date": "2026-06-18",
    "home": "Switzerland",
    "away": "Bosnia and Herzegovina",
    "p_home": 0.611,
@@ -295,17 +306,6 @@
    "p_draw": 0.191,
    "p_away": 0.085,
    "hs": 6,
-   "as": 0,
-   "outcome": "home"
-  },
-  {
-   "date": "2026-06-18",
-   "home": "Mexico",
-   "away": "South Korea",
-   "p_home": 0.482,
-   "p_draw": 0.243,
-   "p_away": 0.276,
-   "hs": 1,
    "as": 0,
    "outcome": "home"
   }
