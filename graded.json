@@ -1,5 +1,5 @@
 {
- "n": 44,
+ "n": 48,
  "graded": [
   {
    "date": "2026-06-11",
@@ -483,6 +483,50 @@
    "p_away": 0.605,
    "hs": 1,
    "as": 2,
+   "outcome": "away"
+  },
+  {
+   "date": "2026-06-23",
+   "home": "Portugal",
+   "away": "Uzbekistan",
+   "p_home": 0.652,
+   "p_draw": 0.206,
+   "p_away": 0.142,
+   "hs": 5,
+   "as": 0,
+   "outcome": "home"
+  },
+  {
+   "date": "2026-06-23",
+   "home": "Colombia",
+   "away": "DR Congo",
+   "p_home": 0.6,
+   "p_draw": 0.217,
+   "p_away": 0.183,
+   "hs": 1,
+   "as": 0,
+   "outcome": "home"
+  },
+  {
+   "date": "2026-06-23",
+   "home": "England",
+   "away": "Ghana",
+   "p_home": 0.713,
+   "p_draw": 0.193,
+   "p_away": 0.094,
+   "hs": 0,
+   "as": 0,
+   "outcome": "draw"
+  },
+  {
+   "date": "2026-06-23",
+   "home": "Panama",
+   "away": "Croatia",
+   "p_home": 0.167,
+   "p_draw": 0.213,
+   "p_away": 0.62,
+   "hs": 0,
+   "as": 1,
    "outcome": "away"
   }
  ]
