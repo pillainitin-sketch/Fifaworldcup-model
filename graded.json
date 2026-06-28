@@ -1,5 +1,5 @@
 {
- "n": 60,
+ "n": 72,
  "graded": [
   {
    "date": "2026-06-11",
@@ -660,6 +660,138 @@
    "hs": 1,
    "as": 3,
    "outcome": "away"
+  },
+  {
+   "date": "2026-06-26",
+   "home": "Egypt",
+   "away": "Iran",
+   "p_home": 0.372,
+   "p_draw": 0.268,
+   "p_away": 0.36,
+   "hs": 1,
+   "as": 1,
+   "outcome": "draw"
+  },
+  {
+   "date": "2026-06-26",
+   "home": "New Zealand",
+   "away": "Belgium",
+   "p_home": 0.129,
+   "p_draw": 0.202,
+   "p_away": 0.668,
+   "hs": 1,
+   "as": 5,
+   "outcome": "away"
+  },
+  {
+   "date": "2026-06-26",
+   "home": "Cape Verde",
+   "away": "Saudi Arabia",
+   "p_home": 0.414,
+   "p_draw": 0.258,
+   "p_away": 0.328,
+   "hs": 0,
+   "as": 0,
+   "outcome": "draw"
+  },
+  {
+   "date": "2026-06-26",
+   "home": "Uruguay",
+   "away": "Spain",
+   "p_home": 0.154,
+   "p_draw": 0.209,
+   "p_away": 0.637,
+   "hs": 0,
+   "as": 1,
+   "outcome": "away"
+  },
+  {
+   "date": "2026-06-26",
+   "home": "Norway",
+   "away": "France",
+   "p_home": 0.197,
+   "p_draw": 0.221,
+   "p_away": 0.582,
+   "hs": 1,
+   "as": 4,
+   "outcome": "away"
+  },
+  {
+   "date": "2026-06-26",
+   "home": "Senegal",
+   "away": "Iraq",
+   "p_home": 0.638,
+   "p_draw": 0.209,
+   "p_away": 0.154,
+   "hs": 5,
+   "as": 0,
+   "outcome": "home"
+  },
+  {
+   "date": "2026-06-27",
+   "home": "Algeria",
+   "away": "Austria",
+   "p_home": 0.363,
+   "p_draw": 0.269,
+   "p_away": 0.368,
+   "hs": 3,
+   "as": 3,
+   "outcome": "draw"
+  },
+  {
+   "date": "2026-06-27",
+   "home": "Jordan",
+   "away": "Argentina",
+   "p_home": 0.051,
+   "p_draw": 0.182,
+   "p_away": 0.767,
+   "hs": 1,
+   "as": 3,
+   "outcome": "away"
+  },
+  {
+   "date": "2026-06-27",
+   "home": "Colombia",
+   "away": "Portugal",
+   "p_home": 0.335,
+   "p_draw": 0.261,
+   "p_away": 0.404,
+   "hs": 0,
+   "as": 0,
+   "outcome": "draw"
+  },
+  {
+   "date": "2026-06-27",
+   "home": "DR Congo",
+   "away": "Uzbekistan",
+   "p_home": 0.411,
+   "p_draw": 0.259,
+   "p_away": 0.33,
+   "hs": 3,
+   "as": 1,
+   "outcome": "home"
+  },
+  {
+   "date": "2026-06-27",
+   "home": "Panama",
+   "away": "England",
+   "p_home": 0.096,
+   "p_draw": 0.194,
+   "p_away": 0.71,
+   "hs": 0,
+   "as": 2,
+   "outcome": "away"
+  },
+  {
+   "date": "2026-06-27",
+   "home": "Croatia",
+   "away": "Ghana",
+   "p_home": 0.608,
+   "p_draw": 0.215,
+   "p_away": 0.177,
+   "hs": 2,
+   "as": 1,
+   "outcome": "home"
   }
  ]
 }
