@@ -1,5 +1,5 @@
 {
- "n": 72,
+ "n": 73,
  "graded": [
   {
    "date": "2026-06-11",
@@ -792,6 +792,17 @@
    "hs": 2,
    "as": 1,
    "outcome": "home"
+  },
+  {
+   "date": "2026-06-28",
+   "home": "South Africa",
+   "away": "Canada",
+   "p_home": 0.2,
+   "p_draw": 0.221,
+   "p_away": 0.579,
+   "hs": 0,
+   "as": 1,
+   "outcome": "away"
   }
  ]
 }
