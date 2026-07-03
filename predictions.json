@@ -1,93 +1,9 @@
 {
  "generated": "2026-06-11",
- "n_fixtures": 11,
+ "n_fixtures": 8,
  "n_teams": 48,
  "n_venues": 16,
  "fixtures": [
-  {
-   "date": "2026-07-02",
-   "city": "Inglewood",
-   "country": "United States",
-   "venue": "SoFi Stadium",
-   "heat": "low",
-   "controlled": false,
-   "altitude_flag": "low",
-   "elev_m": 40,
-   "home": "Spain",
-   "away": "Austria",
-   "home_star": "Lamine Yamal",
-   "away_star": "David Alaba",
-   "elo_home": 2022,
-   "elo_away": 1780,
-   "gap": 242,
-   "p_home": 0.633,
-   "p_draw": 0.21,
-   "p_away": 0.157,
-   "p_home_base": 0.633,
-   "p_away_base": 0.157,
-   "heat_edge": 0.0,
-   "alt_edge": 0.0,
-   "climate_elo": 0.0,
-   "favourite": "Spain",
-   "neutral": true,
-   "read": "Spain favoured on a 242-point rating edge."
-  },
-  {
-   "date": "2026-07-02",
-   "city": "Toronto",
-   "country": "Canada",
-   "venue": "BMO Field",
-   "heat": "moderate",
-   "controlled": false,
-   "altitude_flag": "low",
-   "elev_m": 76,
-   "home": "Portugal",
-   "away": "Croatia",
-   "home_star": "Rafael Leao",
-   "away_star": "Josko Gvardiol",
-   "elo_home": 1926,
-   "elo_away": 1811,
-   "gap": 116,
-   "p_home": 0.504,
-   "p_draw": 0.238,
-   "p_away": 0.258,
-   "p_home_base": 0.504,
-   "p_away_base": 0.258,
-   "heat_edge": 0.0,
-   "alt_edge": 0.0,
-   "climate_elo": 0.0,
-   "favourite": "Portugal",
-   "neutral": true,
-   "read": "Portugal favoured on a 116-point rating edge."
-  },
-  {
-   "date": "2026-07-02",
-   "city": "Vancouver",
-   "country": "Canada",
-   "venue": "BC Place",
-   "heat": "moderate",
-   "controlled": false,
-   "altitude_flag": "low",
-   "elev_m": 3,
-   "home": "Switzerland",
-   "away": "Algeria",
-   "home_star": "Granit Xhaka",
-   "away_star": "Riyad Mahrez",
-   "elo_home": 1811,
-   "elo_away": 1779,
-   "gap": 32,
-   "p_home": 0.403,
-   "p_draw": 0.261,
-   "p_away": 0.336,
-   "p_home_base": 0.403,
-   "p_away_base": 0.336,
-   "heat_edge": 0.0,
-   "alt_edge": 0.0,
-   "climate_elo": 0.0,
-   "favourite": "Switzerland",
-   "neutral": true,
-   "read": "Switzerland favoured on a 32-point rating edge."
-  },
   {
    "date": "2026-07-03",
    "city": "Arlington",
@@ -316,7 +232,7 @@
  "teams": [
   {
    "team": "Spain",
-   "elo": 2022,
+   "elo": 2030,
    "star": "Lamine Yamal",
    "base_c": 32,
    "base_m": 660,
@@ -366,7 +282,7 @@
   },
   {
    "team": "Portugal",
-   "elo": 1926,
+   "elo": 1935,
    "star": "Rafael Leao",
    "base_c": 28,
    "base_m": 40,
@@ -455,11 +371,11 @@
    "rank": 14
   },
   {
-   "team": "Croatia",
-   "elo": 1811,
-   "star": "Josko Gvardiol",
-   "base_c": 27,
-   "base_m": 120,
+   "team": "Switzerland",
+   "elo": 1827,
+   "star": "Granit Xhaka",
+   "base_c": 24,
+   "base_m": 410,
    "hemisphere": "N",
    "europe": "high",
    "rank": 15
@@ -475,22 +391,22 @@
    "rank": 16
   },
   {
-   "team": "Switzerland",
-   "elo": 1811,
-   "star": "Granit Xhaka",
-   "base_c": 24,
-   "base_m": 410,
-   "hemisphere": "N",
-   "europe": "high",
-   "rank": 17
-  },
-  {
    "team": "Uruguay",
    "elo": 1804,
    "star": "Federico Valverde",
    "base_c": 15,
    "base_m": 40,
    "hemisphere": "S",
+   "europe": "high",
+   "rank": 17
+  },
+  {
+   "team": "Croatia",
+   "elo": 1802,
+   "star": "Josko Gvardiol",
+   "base_c": 27,
+   "base_m": 120,
+   "hemisphere": "N",
    "europe": "high",
    "rank": 18
   },
@@ -505,26 +421,6 @@
    "rank": 19
   },
   {
-   "team": "Austria",
-   "elo": 1780,
-   "star": "David Alaba",
-   "base_c": 25,
-   "base_m": 190,
-   "hemisphere": "N",
-   "europe": "high",
-   "rank": 20
-  },
-  {
-   "team": "Algeria",
-   "elo": 1779,
-   "star": "Riyad Mahrez",
-   "base_c": 30,
-   "base_m": 25,
-   "hemisphere": "N",
-   "europe": "high",
-   "rank": 21
-  },
-  {
    "team": "Turkey",
    "elo": 1775,
    "star": "Arda Guler",
@@ -532,7 +428,17 @@
    "base_m": 40,
    "hemisphere": "N",
    "europe": "med",
-   "rank": 22
+   "rank": 20
+  },
+  {
+   "team": "Austria",
+   "elo": 1772,
+   "star": "David Alaba",
+   "base_c": 25,
+   "base_m": 190,
+   "hemisphere": "N",
+   "europe": "high",
+   "rank": 21
   },
   {
    "team": "United States",
@@ -542,6 +448,16 @@
    "base_m": 200,
    "hemisphere": "N",
    "europe": "med",
+   "rank": 22
+  },
+  {
+   "team": "Algeria",
+   "elo": 1763,
+   "star": "Riyad Mahrez",
+   "base_c": 30,
+   "base_m": 25,
+   "hemisphere": "N",
+   "europe": "high",
    "rank": 23
   },
   {
