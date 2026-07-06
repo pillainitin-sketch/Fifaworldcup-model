@@ -1,65 +1,9 @@
 {
  "generated": "2026-06-11",
- "n_fixtures": 6,
+ "n_fixtures": 5,
  "n_teams": 48,
  "n_venues": 16,
  "fixtures": [
-  {
-   "date": "2026-07-05",
-   "city": "East Rutherford",
-   "country": "United States",
-   "venue": "MetLife Stadium",
-   "heat": "moderate",
-   "controlled": false,
-   "altitude_flag": "low",
-   "elev_m": 3,
-   "home": "Brazil",
-   "away": "Norway",
-   "home_star": "Vinicius Junior",
-   "away_star": "Erling Haaland",
-   "elo_home": 1972,
-   "elo_away": 1830,
-   "gap": 142,
-   "p_home": 0.545,
-   "p_draw": 0.229,
-   "p_away": 0.226,
-   "p_home_base": 0.533,
-   "p_away_base": 0.236,
-   "heat_edge": 0.277,
-   "alt_edge": 0.0,
-   "climate_elo": 11.1,
-   "favourite": "Brazil",
-   "neutral": true,
-   "read": "Brazil favoured on a 142-point rating edge."
-  },
-  {
-   "date": "2026-07-05",
-   "city": "Mexico City",
-   "country": "Mexico",
-   "venue": "Estadio Azteca",
-   "heat": "low",
-   "controlled": false,
-   "altitude_flag": "high",
-   "elev_m": 2240,
-   "home": "Mexico",
-   "away": "England",
-   "home_star": "Santiago Gimenez",
-   "away_star": "Jude Bellingham",
-   "elo_home": 1835,
-   "elo_away": 1959,
-   "gap": 124,
-   "p_home": 0.341,
-   "p_draw": 0.262,
-   "p_away": 0.397,
-   "p_home_base": 0.311,
-   "p_away_base": 0.436,
-   "heat_edge": 0.056,
-   "alt_edge": 0.493,
-   "climate_elo": 31.8,
-   "favourite": "England",
-   "neutral": false,
-   "read": "England favoured on a 124-point rating edge. Altitude at Mexico City leans to Mexico."
-  },
   {
    "date": "2026-07-06",
    "city": "Atlanta",
@@ -171,6 +115,34 @@
    "favourite": "France",
    "neutral": true,
    "read": "France favoured on a 130-point rating edge."
+  },
+  {
+   "date": "2026-07-11",
+   "city": "Miami Gardens",
+   "country": "United States",
+   "venue": "Hard Rock Stadium",
+   "heat": "high",
+   "controlled": false,
+   "altitude_flag": "low",
+   "elev_m": 3,
+   "home": "Norway",
+   "away": "England",
+   "home_star": "Erling Haaland",
+   "away_star": "Jude Bellingham",
+   "elo_home": 1853,
+   "elo_away": 1971,
+   "gap": 117,
+   "p_home": 0.253,
+   "p_draw": 0.236,
+   "p_away": 0.51,
+   "p_home_base": 0.257,
+   "p_away_base": 0.505,
+   "heat_edge": -0.111,
+   "alt_edge": 0.0,
+   "climate_elo": -4.4,
+   "favourite": "England",
+   "neutral": true,
+   "read": "England favoured on a 117-point rating edge."
   }
  ],
  "teams": [
@@ -205,22 +177,22 @@
    "rank": 3
   },
   {
-   "team": "Brazil",
-   "elo": 1972,
-   "star": "Vinicius Junior",
-   "base_c": 26,
-   "base_m": 5,
-   "hemisphere": "S",
-   "europe": "high",
-   "rank": 4
-  },
-  {
    "team": "England",
-   "elo": 1959,
+   "elo": 1971,
    "star": "Jude Bellingham",
    "base_c": 23,
    "base_m": 15,
    "hemisphere": "N",
+   "europe": "high",
+   "rank": 4
+  },
+  {
+   "team": "Brazil",
+   "elo": 1948,
+   "star": "Vinicius Junior",
+   "base_c": 26,
+   "base_m": 5,
+   "hemisphere": "S",
    "europe": "high",
    "rank": 5
   },
@@ -285,6 +257,16 @@
    "rank": 11
   },
   {
+   "team": "Norway",
+   "elo": 1853,
+   "star": "Erling Haaland",
+   "base_c": 21,
+   "base_m": 25,
+   "hemisphere": "N",
+   "europe": "high",
+   "rank": 12
+  },
+  {
    "team": "Japan",
    "elo": 1845,
    "star": "Takefusa Kubo",
@@ -292,27 +274,7 @@
    "base_m": 40,
    "hemisphere": "N",
    "europe": "med",
-   "rank": 12
-  },
-  {
-   "team": "Mexico",
-   "elo": 1835,
-   "star": "Santiago Gimenez",
-   "base_c": 24,
-   "base_m": 2240,
-   "hemisphere": "N",
-   "europe": "low",
    "rank": 13
-  },
-  {
-   "team": "Norway",
-   "elo": 1830,
-   "star": "Erling Haaland",
-   "base_c": 21,
-   "base_m": 25,
-   "hemisphere": "N",
-   "europe": "high",
-   "rank": 14
   },
   {
    "team": "Switzerland",
@@ -322,6 +284,16 @@
    "base_m": 410,
    "hemisphere": "N",
    "europe": "high",
+   "rank": 14
+  },
+  {
+   "team": "Mexico",
+   "elo": 1823,
+   "star": "Santiago Gimenez",
+   "base_c": 24,
+   "base_m": 2240,
+   "hemisphere": "N",
+   "europe": "low",
    "rank": 15
   },
   {
