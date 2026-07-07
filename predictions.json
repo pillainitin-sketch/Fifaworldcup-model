@@ -34,34 +34,6 @@
   },
   {
    "date": "2026-07-06",
-   "city": "Seattle",
-   "country": "United States",
-   "venue": "Lumen Field",
-   "heat": "low",
-   "controlled": false,
-   "altitude_flag": "low",
-   "elev_m": 20,
-   "home": "United States",
-   "away": "Belgium",
-   "home_star": "Christian Pulisic",
-   "away_star": "Jeremy Doku",
-   "elo_home": 1764,
-   "elo_away": 1861,
-   "gap": 97,
-   "p_home": 0.34,
-   "p_draw": 0.262,
-   "p_away": 0.398,
-   "p_home_base": 0.336,
-   "p_away_base": 0.403,
-   "heat_edge": 0.111,
-   "alt_edge": 0.0,
-   "climate_elo": 4.4,
-   "favourite": "Belgium",
-   "neutral": false,
-   "read": "Belgium favoured on a 97-point rating edge."
-  },
-  {
-   "date": "2026-07-06",
    "city": "Vancouver",
    "country": "Canada",
    "venue": "BC Place",
@@ -117,6 +89,34 @@
    "read": "France favoured on a 130-point rating edge."
   },
   {
+   "date": "2026-07-10",
+   "city": "Inglewood",
+   "country": "United States",
+   "venue": "SoFi Stadium",
+   "heat": "low",
+   "controlled": false,
+   "altitude_flag": "low",
+   "elev_m": 40,
+   "home": "Spain",
+   "away": "Belgium",
+   "home_star": "Lamine Yamal",
+   "away_star": "Jeremy Doku",
+   "elo_home": 2038,
+   "elo_away": 1879,
+   "gap": 159,
+   "p_home": 0.557,
+   "p_draw": 0.226,
+   "p_away": 0.217,
+   "p_home_base": 0.552,
+   "p_away_base": 0.221,
+   "heat_edge": 0.111,
+   "alt_edge": 0.0,
+   "climate_elo": 4.4,
+   "favourite": "Spain",
+   "neutral": true,
+   "read": "Spain favoured on a 159-point rating edge."
+  },
+  {
    "date": "2026-07-11",
    "city": "Miami Gardens",
    "country": "United States",
@@ -129,26 +129,26 @@
    "away": "England",
    "home_star": "Erling Haaland",
    "away_star": "Jude Bellingham",
-   "elo_home": 1853,
+   "elo_home": 1845,
    "elo_away": 1971,
-   "gap": 117,
-   "p_home": 0.253,
-   "p_draw": 0.236,
-   "p_away": 0.51,
-   "p_home_base": 0.257,
-   "p_away_base": 0.505,
+   "gap": 125,
+   "p_home": 0.246,
+   "p_draw": 0.234,
+   "p_away": 0.519,
+   "p_home_base": 0.25,
+   "p_away_base": 0.514,
    "heat_edge": -0.111,
    "alt_edge": 0.0,
    "climate_elo": -4.4,
    "favourite": "England",
    "neutral": true,
-   "read": "England favoured on a 117-point rating edge."
+   "read": "England favoured on a 125-point rating edge."
   }
  ],
  "teams": [
   {
    "team": "Spain",
-   "elo": 2030,
+   "elo": 2038,
    "star": "Lamine Yamal",
    "base_c": 32,
    "base_m": 660,
@@ -188,7 +188,7 @@
   },
   {
    "team": "Brazil",
-   "elo": 1948,
+   "elo": 1956,
    "star": "Vinicius Junior",
    "base_c": 26,
    "base_m": 5,
@@ -198,7 +198,7 @@
   },
   {
    "team": "Portugal",
-   "elo": 1935,
+   "elo": 1927,
    "star": "Rafael Leao",
    "base_c": 28,
    "base_m": 40,
@@ -248,23 +248,13 @@
   },
   {
    "team": "Belgium",
-   "elo": 1861,
+   "elo": 1879,
    "star": "Jeremy Doku",
    "base_c": 22,
    "base_m": 35,
    "hemisphere": "N",
    "europe": "high",
    "rank": 11
-  },
-  {
-   "team": "Norway",
-   "elo": 1853,
-   "star": "Erling Haaland",
-   "base_c": 21,
-   "base_m": 25,
-   "hemisphere": "N",
-   "europe": "high",
-   "rank": 12
   },
   {
    "team": "Japan",
@@ -274,6 +264,16 @@
    "base_m": 40,
    "hemisphere": "N",
    "europe": "med",
+   "rank": 12
+  },
+  {
+   "team": "Norway",
+   "elo": 1845,
+   "star": "Erling Haaland",
+   "base_c": 21,
+   "base_m": 25,
+   "hemisphere": "N",
+   "europe": "high",
    "rank": 13
   },
   {
@@ -357,16 +357,6 @@
    "rank": 21
   },
   {
-   "team": "United States",
-   "elo": 1764,
-   "star": "Christian Pulisic",
-   "base_c": 28,
-   "base_m": 200,
-   "hemisphere": "N",
-   "europe": "med",
-   "rank": 22
-  },
-  {
    "team": "Algeria",
    "elo": 1763,
    "star": "Riyad Mahrez",
@@ -374,7 +364,7 @@
    "base_m": 25,
    "hemisphere": "N",
    "europe": "high",
-   "rank": 23
+   "rank": 22
   },
   {
    "team": "Ivory Coast",
@@ -384,6 +374,16 @@
    "base_m": 20,
    "hemisphere": "N",
    "europe": "high",
+   "rank": 23
+  },
+  {
+   "team": "United States",
+   "elo": 1747,
+   "star": "Christian Pulisic",
+   "base_c": 28,
+   "base_m": 200,
+   "hemisphere": "N",
+   "europe": "med",
    "rank": 24
   },
   {
