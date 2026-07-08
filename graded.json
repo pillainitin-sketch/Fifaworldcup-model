@@ -1,5 +1,5 @@
 {
- "n": 94,
+ "n": 96,
  "graded": [
   {
    "date": "2026-06-11",
@@ -1034,6 +1034,28 @@
    "hs": 1,
    "as": 4,
    "outcome": "away"
+  },
+  {
+   "date": "2026-07-07",
+   "home": "Argentina",
+   "away": "Egypt",
+   "p_home": 0.67,
+   "p_draw": 0.202,
+   "p_away": 0.128,
+   "hs": 3,
+   "as": 2,
+   "outcome": "home"
+  },
+  {
+   "date": "2026-07-07",
+   "home": "Switzerland",
+   "away": "Colombia",
+   "p_home": 0.309,
+   "p_draw": 0.253,
+   "p_away": 0.438,
+   "hs": 0,
+   "as": 0,
+   "outcome": "draw"
   }
  ]
 }
