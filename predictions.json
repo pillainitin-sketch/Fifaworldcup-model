@@ -1,37 +1,9 @@
 {
  "generated": "2026-06-11",
- "n_fixtures": 4,
+ "n_fixtures": 3,
  "n_teams": 48,
  "n_venues": 16,
  "fixtures": [
-  {
-   "date": "2026-07-09",
-   "city": "Foxborough",
-   "country": "United States",
-   "venue": "Gillette Stadium",
-   "heat": "moderate",
-   "controlled": false,
-   "altitude_flag": "low",
-   "elev_m": 60,
-   "home": "France",
-   "away": "Morocco",
-   "home_star": "Kylian Mbappe",
-   "away_star": "Achraf Hakimi",
-   "elo_home": 2011,
-   "elo_away": 1881,
-   "gap": 130,
-   "p_home": 0.515,
-   "p_draw": 0.235,
-   "p_away": 0.25,
-   "p_home_base": 0.52,
-   "p_away_base": 0.246,
-   "heat_edge": -0.111,
-   "alt_edge": 0.0,
-   "climate_elo": -4.4,
-   "favourite": "France",
-   "neutral": true,
-   "read": "France favoured on a 130-point rating edge."
-  },
   {
    "date": "2026-07-10",
    "city": "Inglewood",
@@ -129,22 +101,22 @@
    "rank": 1
   },
   {
+   "team": "France",
+   "elo": 2024,
+   "star": "Kylian Mbappe",
+   "base_c": 24,
+   "base_m": 35,
+   "hemisphere": "N",
+   "europe": "high",
+   "rank": 2
+  },
+  {
    "team": "Argentina",
    "elo": 2021,
    "star": "Julian Alvarez",
    "base_c": 15,
    "base_m": 25,
    "hemisphere": "S",
-   "europe": "high",
-   "rank": 2
-  },
-  {
-   "team": "France",
-   "elo": 2011,
-   "star": "Kylian Mbappe",
-   "base_c": 24,
-   "base_m": 35,
-   "hemisphere": "N",
    "europe": "high",
    "rank": 3
   },
@@ -209,21 +181,21 @@
    "rank": 9
   },
   {
-   "team": "Morocco",
-   "elo": 1881,
-   "star": "Achraf Hakimi",
-   "base_c": 26,
-   "base_m": 50,
-   "hemisphere": "N",
-   "europe": "high",
-   "rank": 10
-  },
-  {
    "team": "Belgium",
    "elo": 1879,
    "star": "Jeremy Doku",
    "base_c": 22,
    "base_m": 35,
+   "hemisphere": "N",
+   "europe": "high",
+   "rank": 10
+  },
+  {
+   "team": "Morocco",
+   "elo": 1868,
+   "star": "Achraf Hakimi",
+   "base_c": 26,
+   "base_m": 50,
    "hemisphere": "N",
    "europe": "high",
    "rank": 11
