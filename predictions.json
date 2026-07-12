@@ -1,37 +1,9 @@
 {
  "generated": "2026-06-11",
- "n_fixtures": 3,
+ "n_fixtures": 2,
  "n_teams": 48,
  "n_venues": 16,
  "fixtures": [
-  {
-   "date": "2026-07-10",
-   "city": "Inglewood",
-   "country": "United States",
-   "venue": "SoFi Stadium",
-   "heat": "low",
-   "controlled": false,
-   "altitude_flag": "low",
-   "elev_m": 40,
-   "home": "Spain",
-   "away": "Belgium",
-   "home_star": "Lamine Yamal",
-   "away_star": "Jeremy Doku",
-   "elo_home": 2038,
-   "elo_away": 1879,
-   "gap": 159,
-   "p_home": 0.557,
-   "p_draw": 0.226,
-   "p_away": 0.217,
-   "p_home_base": 0.552,
-   "p_away_base": 0.221,
-   "heat_edge": 0.111,
-   "alt_edge": 0.0,
-   "climate_elo": 4.4,
-   "favourite": "Spain",
-   "neutral": true,
-   "read": "Spain favoured on a 159-point rating edge."
-  },
   {
    "date": "2026-07-11",
    "city": "Kansas City",
@@ -92,7 +64,7 @@
  "teams": [
   {
    "team": "Spain",
-   "elo": 2038,
+   "elo": 2044,
    "star": "Lamine Yamal",
    "base_c": 32,
    "base_m": 660,
@@ -182,7 +154,7 @@
   },
   {
    "team": "Belgium",
-   "elo": 1879,
+   "elo": 1872,
    "star": "Jeremy Doku",
    "base_c": 22,
    "base_m": 35,
