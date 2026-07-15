@@ -1,37 +1,9 @@
 {
  "generated": "2026-06-11",
- "n_fixtures": 2,
+ "n_fixtures": 1,
  "n_teams": 48,
  "n_venues": 16,
  "fixtures": [
-  {
-   "date": "2026-07-14",
-   "city": "Arlington",
-   "country": "United States",
-   "venue": "AT&T Stadium",
-   "heat": "controlled",
-   "controlled": true,
-   "altitude_flag": "low",
-   "elev_m": 180,
-   "home": "France",
-   "away": "Spain",
-   "home_star": "Kylian Mbappe",
-   "away_star": "Lamine Yamal",
-   "elo_home": 2024,
-   "elo_away": 2044,
-   "gap": 21,
-   "p_home": 0.346,
-   "p_draw": 0.264,
-   "p_away": 0.39,
-   "p_home_base": 0.346,
-   "p_away_base": 0.39,
-   "heat_edge": 0.0,
-   "alt_edge": 0.0,
-   "climate_elo": 0.0,
-   "favourite": "Spain",
-   "neutral": true,
-   "read": "Spain favoured on a 21-point rating edge."
-  },
   {
    "date": "2026-07-15",
    "city": "Atlanta",
@@ -64,7 +36,7 @@
  "teams": [
   {
    "team": "Spain",
-   "elo": 2044,
+   "elo": 2060,
    "star": "Lamine Yamal",
    "base_c": 32,
    "base_m": 660,
@@ -84,7 +56,7 @@
   },
   {
    "team": "France",
-   "elo": 2024,
+   "elo": 2008,
    "star": "Kylian Mbappe",
    "base_c": 24,
    "base_m": 35,
