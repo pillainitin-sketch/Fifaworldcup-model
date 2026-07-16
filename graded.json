@@ -1,5 +1,5 @@
 {
- "n": 101,
+ "n": 102,
  "graded": [
   {
    "date": "2026-06-11",
@@ -73,7 +73,7 @@
    "away": "Scotland",
    "p_home": 0.232,
    "p_draw": 0.23,
-   "p_away": 0.537,
+   "p_away": 0.538,
    "hs": 0,
    "as": 1,
    "outcome": "away"
@@ -82,7 +82,7 @@
    "date": "2026-06-13",
    "home": "Australia",
    "away": "Turkey",
-   "p_home": 0.293,
+   "p_home": 0.292,
    "p_draw": 0.248,
    "p_away": 0.46,
    "hs": 2,
@@ -115,7 +115,7 @@
    "date": "2026-06-14",
    "home": "Netherlands",
    "away": "Japan",
-   "p_home": 0.411,
+   "p_home": 0.412,
    "p_draw": 0.259,
    "p_away": 0.33,
    "hs": 2,
@@ -161,7 +161,7 @@
    "away": "Cape Verde",
    "p_home": 0.766,
    "p_draw": 0.183,
-   "p_away": 0.052,
+   "p_away": 0.051,
    "hs": 0,
    "as": 0,
    "outcome": "draw"
@@ -489,7 +489,7 @@
    "date": "2026-06-23",
    "home": "Portugal",
    "away": "Uzbekistan",
-   "p_home": 0.652,
+   "p_home": 0.653,
    "p_draw": 0.206,
    "p_away": 0.142,
    "hs": 5,
@@ -1109,6 +1109,17 @@
    "p_draw": 0.268,
    "p_away": 0.373,
    "hs": 0,
+   "as": 2,
+   "outcome": "away"
+  },
+  {
+   "date": "2026-07-15",
+   "home": "England",
+   "away": "Argentina",
+   "p_home": 0.32,
+   "p_draw": 0.256,
+   "p_away": 0.424,
+   "hs": 1,
    "as": 2,
    "outcome": "away"
   }
